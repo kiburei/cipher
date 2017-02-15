@@ -26,9 +26,28 @@ function reverseString(str) {
 }
 
 //Calling two functions
-function twiceCall(str) {
+function twiceCall() {
 
   var result = reverseString(alphaOmega());
 
   return  globalVar.sentence + " " + result
 }
+
+function fourthFunct() {
+
+  var char = globalVar.sentence.split("");
+
+  var nthElement = char.length / 2;
+
+  var result = char.join("").charAt(nthElement);
+
+  var final = result + " " + globalVar.sentence;
+
+  return reverseString(final);
+}
+jquery(document).ready(function(){
+$("image").hide();
+$("#image").click(function() {
+  $("#.image").toggle();
+});
+});
