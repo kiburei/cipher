@@ -1,14 +1,15 @@
+var globalVar = {};
 //Return the first and last cha of a string
 function alphaOmega() {
-  var sentence = prompt("Write a sentence here please.");
+  globalVar.sentence = prompt("weka udaku hapa");
 
-  var first = sentence.charAt(0).toUpperCase();
+  var first = globalVar.sentence.charAt(0).toUpperCase();
 
-  var last = sentence.slice(-1).toUpperCase();
+  var last = globalVar.sentence.slice(-1).toUpperCase();
 
-  var result = first + last
+  var result = first + last;
 
-  return result
+  return result;
 
 }
 
@@ -25,9 +26,9 @@ function reverseString(str) {
 }
 
 //Calling two functions
-function twiceCall() {
+function twiceCall(str) {
 
   var result = reverseString(alphaOmega());
 
-  return result
+  return  globalVar.sentence + " " + result
 }
